@@ -1,0 +1,14 @@
+# macOS system files
+.DS_Store
+
+# Python
+__pycache__/
+
+# Virtual environments
+.area51
+.venv
+.narnia
+
+# IDE and editor files
+.vscode/
+.idea/
