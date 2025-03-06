@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+    <h1>Welcome to The Basics of Web Development</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#html">HTML Basics</a></li>
+        <li><a href="#webdev">HTML in Web Development</a></li>
+        <li><a href="#flask">Introduction to Flask</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="html">
+        <h2>HTML Basics</h2>
+        <p>
+            HTML (HyperText Markup Language) is the standard language for creating web pages. <br/>
+            It structures content using elements like headings, paragraphs, images, and links.
+        </p>
+    </section>
+    
+    <section id="webdev">
+        <h2>HTML in Web Development</h2>
+        <p>
+            HTML is the backbone of web development. <br/>
+            It works with CSS for styling and JavaScript for interactivity, forming the core of modern web applications.
+        </p>
+    </section>
+    
+    <section id="flask">
+        <img src="static/flask_logo.png" alt="Flask Logo Image" class="flask-logo">
+        <h2>Introduction to Flask</h2>
+        <p>
+            Flask is a lightweight Python web framework used to build web applications. <br/>
+            It allows developers to create dynamic websites with minimal code.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 DTE-2509</p>
+</footer>
+
+{% endblock %}
