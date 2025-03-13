@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(162, 167, 172);
+    text-align: center;
+    font-family: Shanti, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+h1 {
+    color: white;
+    font-size: 1.6em;
+    margin: 20px;
+}
+
+h2 {
+    color: white;
+    font-size: 1.4em;
+    margin: 15px;
+}
+
+p {
+    color: white;
+    font-size: 1.2em;
+    margin: 20px;
+    line-height: 1.5;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+.flask-logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    font-size: 0.7em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+}

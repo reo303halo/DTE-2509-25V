@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Recommended Books to Read About Web Development</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in rec_books %}
+        <tr>
+            <td>{{ book.author }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.year }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
