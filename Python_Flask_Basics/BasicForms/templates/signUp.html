@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Sign Up Page</h1>
+
+
+    <form action="{{ url_for('registration') }}" method ="POST">
+        <table>
+            <tr>
+                <td>Firstname:</td>
+                <td><input type ="text" name ="firstname" required></td>
+            </tr>
+            <tr>
+                <td>Lastname:</td>
+                <td><input type ="text" name ="lastname" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type ="email" name ="e_mail" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type ="password" name ="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required></td>
+            </tr>   
+            <tr>
+                <td>Confirm password:</td>
+                <td><input type ="password" name ="confirm_password" required></td>
+            </tr>   
+            <td>
+                <p style="color: red;" > {{ get_flashed_messages()[0] }} </p>
+            </td>
+        </table>
+        <input type="Submit" name="sign_up" value="Sign up" class="buttons">
+    </form>
+    <button onclick="history.back()">Avbryt</button>
+    
+
+{% endblock %}

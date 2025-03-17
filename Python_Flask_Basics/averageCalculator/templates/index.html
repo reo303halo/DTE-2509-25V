@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+  
+<form action = "{{ url_for('home') }}" method = "post">
+    {% for message in get_flashed_messages() %}
+        <p> {{ message }}</p>
+    {% endfor %}
+    <input type = "text" name = "number_input">
+    <br>
+    <input type = "submit" value = "ADD">
+</form>
+
+<h2>Average of all numbers entered: {{ average }}</h2>
+<br>
+<h3>There are {{ total_of_numbers }} numbers entered so far!</h3>
+  
+{% endblock %}

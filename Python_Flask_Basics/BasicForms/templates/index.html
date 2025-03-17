@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  
+    <h1>Home</h1>
+
+    {% for messages in get_flashed_messages() %}
+        <p> {{ messages }} </p> 
+    {% endfor %}
+
+    <form action = "{{ url_for('sign_up') }}">     <!--Velger hva knappen gjør: Sender deg til funksjonen greeting i app.py-->
+        <input type="Submit" value="Go To Signup">
+    </form>
+
+{% endblock %}

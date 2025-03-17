@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(162, 167, 172);
+    text-align: center;
+}
+
+h1 {
+    color:rgb(197, 0, 178);
+    font-family: Shanti;
+    font-size: 2.5em;
+    margin: 20px;
+}
+
+h2 {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.6em;
+    margin: 20px;
+}
+
+h3 {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.6em;
+    margin: 20px;
+}
+
+p {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.4em;
+    margin: 20px;
+}
+
+input {
+    width: 210px;
+    height: 40px;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+
+    color:rgb(197, 0, 178);
+    font-family: Shanti;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+input:focus {
+    border: solid 5px #00FFCE;
+    outline: none;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    font-size: 0.7em;
+}
