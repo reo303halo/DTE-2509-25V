@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ movie.title }}</h1>
+<p><strong>Year:</strong> {{ movie.year }}</p>
+<p><strong>Country:</strong> {{ movie.country }}</p>
+<p><strong>Age Rating:</strong> {{ movie.age_rating }}</p>
+<p><strong>Duration:</strong> {{ movie.duration }} min</p>
+<p><strong>Price:</strong> {{ movie.price }} NOK</p>
+
+<a href="{{ url_for('home') }}">Back to movie list</a>
+
+{% endblock %}
