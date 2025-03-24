@@ -3,3 +3,8 @@ Lastname: Olsen
 Email: roy@uit.no
 Password: scrypt:32768:8:1$INUkc0l2KdFoG3iO$f2eb689f2dea996fe12b3bcc663b79c622b84745c63ae63e1c08d072a926897ed2348d28b9963e0f6af27891adb8dafb2299c51b8bf13de1f4524a5714aa20b0
 
+Firstname: Roy
+Lastname: Olsen
+Email: roy@uit.no
+Password: scrypt:32768:8:1$uICNu6kITZGbWaCa$d7d4298cf48adcb7888e152797ef05b3461fcb7b871ddfb8bbc006ca74fea6a40ff2c1270dad82de67b0c3b62542f515045c97294be795b301b7317f8c2bfefd
+

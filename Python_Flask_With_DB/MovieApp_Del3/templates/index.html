@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+<div id="flash-message" class="flash-info">
+    {{ message }} <button onclick="dismissFlash()">X</button>
+</div>
+{% endfor %}
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Age Rating</th>
+            <th>Price (NOK)</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for movie in movies %}
+        <tr>
+            <td><a href = "{{ url_for('movie_info', movie_id=movie.id) }}">{{ movie.title }}</a></td>
+            <td>{{ movie.year }}</td>
+            <td>{{ movie.age_rating }}</td>
+            <td>{{ movie.price }}</td>
+            <td>
+                <form action="{{ url_for('delete', movie_id=movie.id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this movie?');">
+                    <input type="submit" value="Delete">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<form action="{{ url_for('create') }}">
+    <input type="submit" value="Add Movie">
+</form>
+
+<script>
+    function dismissFlash() {
+        document.getElementById("flash-message").style.display = "none";
+    }
+</script>
+
+{% endblock %}
