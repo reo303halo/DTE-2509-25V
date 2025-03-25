@@ -1,8 +1,13 @@
+from flask_login import UserMixin
 
-#class User():
+
+class User(UserMixin):
+    def __init__(self, id, name, email, role):
+        self.id = id
+        self.name = name
+        self.email = email
+        self.role = role
     
-
-
 
 """
 The class that you use to represent users needs to implement certain properties and methods.
