@@ -39,5 +39,10 @@ class DataBase():
     
 
     def load_user_by_email(self, email):
-        self.cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
+        self.cursor.execute("SELECT * FROM users WHERE email = %s;", (email,))
         return self.cursor.fetchone()
+    
+
+    def get_cars_by_owner(self, owner_id):
+        self.cursor.execute("SELECT id, make, model, year FROM cars WHERE owner_id = %s;", (owner_id,))
+        return self.cursor.fetchall()

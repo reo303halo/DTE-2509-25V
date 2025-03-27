@@ -12,8 +12,8 @@
         <div class="container mt-4">
             <h1 class="text-center">Flask Login</h1>
             <div class="text-center">
-                <a href="{{ url_for('login') }}" class="btn btn-primary btn-sm">Login</a> | 
-                <a href="{{ url_for('register') }}" class="btn btn-secondary btn-sm">Register</a>
+                <a href="{{ url_for('users.login') }}" class="btn btn-primary btn-sm">Login</a> | 
+                <a href="{{ url_for('users.register') }}" class="btn btn-secondary btn-sm">Register</a>
             </div>
         
             {% block content %}

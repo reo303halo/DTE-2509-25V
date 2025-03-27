@@ -11,7 +11,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `cars` (
-    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `id` INT AUTO_INCREMENT PRIMARY KEY, --Could be replaced with Licence Plate Number (or this could be added in addition)
     `owner_id` INT NOT NULL,
     `make` VARCHAR(50) NOT NULL,
     `model` VARCHAR(50) NOT NULL,
