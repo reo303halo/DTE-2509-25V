@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Portal</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Employee Portal</h1>
+    <h2>All Employees</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Salary</th>
+            <th>Department</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp.emp_number }}</td>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.job }}</td>
+            <td>{{ emp.salary }}</td>
+            <td>{{ emp.dept_number}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
