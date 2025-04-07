@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Example: &lt;script&gt;alert("XSS")&lt;/script&gt;</h2>
+
+<form method="POST">
+    Enter your name: <input name="name">
+    <input type="submit" value="Submit">
+</form>
+
+{% if name %}
+    <div id="output">
+        <h2>Hello {{ name|safe }}!</h2>  <!-- XSS VULNERABLE "|safe"-->
+    </div>
+    <!-- You'd use |safe only when you intentionally want HTML inside a variable to render, and you are sure it's safe to do so-->
+{% endif %}
+{% endblock %}

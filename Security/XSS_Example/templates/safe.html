@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>
+    Jinja2 automatically escapes anything potentially dangerous in name, such as: &lt;script&gt;alert("XSS")&lt;/script&gt;
+</h2>
+
+<form method="POST">
+    Enter your name: <input name="name">
+    <input type="submit" value="Submit">
+</form>
+
+{% if name %}
+    <div id="output">
+        <h2>Hello {{ name }}!</h2> <!-- Jinja templates are XSS safe by default--> 
+    </div>
+
+{% endif %}
+{% endblock %}
