@@ -7,8 +7,9 @@
 {% endif %}
 <p>Current Balance: ${{ balance }}</p>
 <form method="post">
-    <input name="to" placeholder="Recipient"><br><br>
-    <input name="amount" type="number" placeholder="Amount"><br><br>
-    <input type="submit" value="Transfer">
+    {{ form.hidden_tag() }}
+    <p>{{ form.to.label }}{{ form.to() }}</p>
+    <p>{{ form.amount.label }}{{ form.amount() }}</p>
+    <p>{{ form.submit() }}</p>
 </form>
 {% endblock %}

