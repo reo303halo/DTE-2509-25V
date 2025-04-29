@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8" />
+        <title>{{ the_title }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}"/>
+     </head>
+    <body>
+        <h1> 
+            <a style="color: inherit; text-decoration: none;"
+           href="{{ url_for('home') }}">Movies</a>
+        </h1>
+
+        {% block content %}
+        {% endblock %}
+        
+    </body>
+</html>

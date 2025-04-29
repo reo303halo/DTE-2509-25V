@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Add Movie</h1>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <table>
+        <tr><td>{{ form.title.label }}</td><td>{{ form.title() }}</td></tr>
+        <tr><td>{{ form.year.label }}</td><td>{{ form.year() }}</td></tr>
+        <tr><td>{{ form.country.label }}</td><td>{{ form.country() }}</td></tr>
+        <tr><td>{{ form.genre.label }}</td><td>{{ form.genre() }}</td></tr>
+        <tr><td>{{ form.age_rating.label }}</td><td>{{ form.age_rating() }}</td></tr>
+        <tr><td>{{ form.duration.label }}</td><td>{{ form.duration() }}</td></tr>
+        <tr><td>{{ form.price.label }}</td><td>{{ form.price() }}</td></tr>
+    </table>
+
+    {{ form.submit(class_="btn-primary")}}
+    <button type="button" class="btn-secondary" onclick="history.back()">Cancel</button>
+</form>
+
+{% endblock %}
