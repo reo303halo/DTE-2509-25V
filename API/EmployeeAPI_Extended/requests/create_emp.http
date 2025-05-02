@@ -1,0 +1,20 @@
+
+
+@deptno = 4
+
+GET http://127.0.0.1:5004/api/departments/{{deptno}}/employees
+Accept: application/json
+
+### Create a new employee
+POST http://127.0.0.1:5004/api/employees
+Content-Type: application/json
+
+{
+    "ename": "Alice Johnson",
+    "job": "Analyst",
+    "mgr": 7566,
+    "hiredate": "2025-04-02 10:00:00",
+    "sal": 4000.50,
+    "comm": 150.75,
+    "deptno": 5
+}

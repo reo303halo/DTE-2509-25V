@@ -1,0 +1,12 @@
+
+GET http://127.0.0.1:5004/api/departments
+Accept: application/json
+
+
+POST http://127.0.0.1:5004/api/departments
+Content-Type: application/json
+
+{
+    "dname": "Research",
+    "loc": "California"
+}
