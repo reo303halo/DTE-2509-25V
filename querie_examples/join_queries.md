@@ -1,6 +1,8 @@
 
-````markdown
+```markdown
 # SQL Queries for Students and Courses
+```
+---
 
 ## 📋 1. List All Students with Their Enrolled Courses
 
@@ -9,7 +11,7 @@ SELECT s.name, c.title, e.enrolled_on
 FROM enrollments e
 JOIN students s ON e.student_id = s.student_id
 JOIN courses c ON e.course_id = c.course_id;
-````
+```
 
 ---
 
