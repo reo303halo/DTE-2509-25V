@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2>{{ 'Edit' if car else 'Add' }} Car</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="make" class="form-label">Make</label>
+            <input type="text" class="form-control" id="make" name="make" value="{{ car.make if car else '' }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="model" class="form-label">Model</label>
+            <input type="text" class="form-control" id="model" name="model" value="{{ car.model if car else '' }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="year" class="form-label">Year</label>
+            <input type="number" class="form-control" id="year" name="year" value="{{ car.year if car else '' }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="vin" class="form-label">Vin</label>
+            <input type="text" class="form-control" id="vin" name="vin" value="{{ car.vin if car else '' }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">{{ 'Update' if car else 'Add' }} Car</button>
+    </form>
+</div>
+
+{% endblock %}
